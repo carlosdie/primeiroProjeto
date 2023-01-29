@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') -%>
+  <div class="container">
+    <h1><%= resposta.titulo    %></h1>
+    <h6><%= resposta.descricao %></h6>
+    <hr>
+    <form  action="/responder" method="POST">
+      <textarea Placeholder="Digite sua resposta" name="data" class="form-control"></textarea>
+      <br>
+      <input type="hidden" name="perguntaId" value="<%= resposta.id %>">
+      <button  type="submit" class="btn btn-danger">Pronto</button>
+    </form>
+    <hr>
+    <h3>Respostas: </h3>
+    <% result.map((elemento) => { %>
+        <ul>
+          <li><%= elemento.data %></li>
+        </ul>
+    <%  }) %>
+    </div>
+<%- include('partials/footer.ejs') -%>
