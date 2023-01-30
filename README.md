@@ -1,1 +1,1 @@
-projeto de pergunats e resposta 
+projeto de perguntas e resposta 
